@@ -3,42 +3,64 @@
 	<head>
 		<title>jarnecooijmans portfolio</title>
 		<link rel="stylesheet" href="stylesheet.css" type="text/css" media="screen"/>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="myscript.js"></script> 
 	</head>
 	<body>
-		<div class="workfield">
-			<div class="workfieldContent">
-				<!-- home button -->
-				<div class ="workfieldItem" id="home">
-					<h1>jarne</h1> <!-- MISSCHIEN HIER ZON TYPEND DING VAN MAKEN "IK BEN JARNE" "IK HOU VAN TECHNIEK" "IK BEN BREED OPGELEID"
-					<!-- close all open tabs -->
-				</div>
+		<!-- Actual text/image copntent of the site -->
+		<div id ="contentBox"> 
 
-				<!-- div containing work i'm proud of -->
-				<div class ="workfieldItem" id="work">
-					<h1>werk</h1>
-						<ul class="worklist">
-							<li class="workListItem" id="cartamundi">cartamundi</li>
-							<li class="workListItem" id="lune">lune</li>
-							<li class="workListItem" id="sensiks">sensiks</li>
-							<li class="workListItem" id="drawing">drawing</li>
-						</ul>
+			<div class="contentBoxes" id="home">
+				<h1>
+					Jarne Cooijmans - een kijkje in mij
+				</h1>
+				<p>
+					Ik ben Jarne Cooijmans, een Communicatie en Multimedia student die houdt van een breed gala van verschillende onderwerpen. Je bevindt je op mijn portfolio website, waarin ik mezelf voor wil stellen aan de hand van onderdelen die in mij zitten. Links in het beeld zie je mij. Dit is je menu waarmee je de rondleiding door Jarne kan beginnen!
+				</p>
+			</div>
 
-						<div class="cartamundi">
-							<p> wollah meh</p>
+			<div class="contentBoxes" id="brain">
+				<h1>
+					Het brein - de kennis die ik heb
+				</h1>
+				<p>
+					Als Communicatie en Multimedia student heb ik natuurlijk door mijn schooltijd heen heel wat kennis op gedaan van verschillende technieken. Enkele programma's/talen/onderdelen waar ik mezelf zeker in voel zijn HTML/CSS/Javascript, Adobe Creative Cloud, Unity C#, Python en Arduino.
+				</p>
+			</div>
 
-						</div>
-				</div>
+			<div class="contentBoxes" id="heart">
+				<h1>
+					Het hart - waar ligt mijn passie?
+				</h1>
+				<p>
+					Mijn passie ligt er rond techniek. Innoverende nieuwe dingen die uitkomen en waar volop aan wordt geklust zoals VR en AR trekken vaak mijn aandacht. Maar ook het maken van echte praktische dingen met Arduino o.i.d. is iets waar ik veel mee bezig zou willen zijn.
 
-				<!-- div containing information about me -->
-				<div class ="workfieldItem" id="about">
-					<h1>over</h1>
-				</div>
+					In mijn vrije tijd besteed ik verder aandacht aan tekenen, muziek en het leren van nieuwe dingen. Zo ben ik nu bijvoorbeeld volop bezig met het leren van Russisch, omdat deze taal mij al een tijd intrigeert.
+				</p>
+			</div>
 
-				<!-- div ways to contact me -->
-				<div class ="workfieldItem" id="contact">
-					<h1>contact</h1>
-				</div>
+			<div class="contentBoxes" id="shadow">
+				<h1>
+					Mijn schaduw - wat heb ik al gedaan?
+				</h1>
+				<p>
+					Ik heb natuurlijk door mijn carriere heen al heel wat projecten gedaan. Om er een paar uit te lichten:
+					Lune, Sensiks, Cartamundi, De Waterlinie.
+				</p>
 			</div>
 		</div>
+
+		<!-- Menu -->
+		<div class="personMenu">
+			<img id = "personMenu" src = "images\placeholderMenu.png" alt="Smiley face">
+		</div>
+
+		<!-- Menu links -->
+		<div class="personMenu">
+			<a class="userButtons" href="#" onclick="openBrain()"></a>
+			<a class="userButtons" href="#" onclick="openHeart()"></a>
+			<a class="userButtons" href="#" onclick="openShadow()"></a>
+		</div>
+
 	</body>
 </html>
