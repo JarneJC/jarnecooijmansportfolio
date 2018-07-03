@@ -1,27 +1,45 @@
-function openHome() {
-  document.getElementById("home").style.visibility = "visible";
-  document.getElementById("brain").style.visibility = "hidden";
-  document.getElementById("heart").style.visibility = "hidden";
-  document.getElementById("shadow").style.visibility = "hidden";
-}
+$(document).ready(function(){
+  $("#home").click(function(){
+    $("#contactContent").animate({height: "0vh"});
+    $("#werkContent").animate({height: "0vh"});
+    $("#overContent").animate({height: "0vh"}).promise().done(function(){    
+      $("#werkContent").css("display", "none");
+      $("#overContent").css("display", "none");
+      $("#contactContent").css("display", "none");
+    });
+  });
 
-function openBrain() {
-  document.getElementById("home").style.visibility = "hidden";
-  document.getElementById("brain").style.visibility = "visible";
-  document.getElementById("heart").style.visibility = "hidden";
-  document.getElementById("shadow").style.visibility = "hidden";
-}
+  $("#werk").click(function(){
+    $("#overContent").animate({height: "0vh"});
+    $("#contactContent").animate({height: "0vh"}).promise().done(function(){
+      $("#werkContent").css("display", "block");
+      $("#overContent").css("display", "none");
+      $("#contactContent").css("display", "none");
 
-function openHeart() {
-  document.getElementById("home").style.visibility = "hidden";
-  document.getElementById("brain").style.visibility = "hidden";
-  document.getElementById("heart").style.visibility = "visible";
-  document.getElementById("shadow").style.visibility = "hidden";
-}
+      $("#werkContent").animate({height: "70vh"});
+    });
+  });
 
-function openShadow() {
-  document.getElementById("home").style.visibility = "hidden";
-  document.getElementById("brain").style.visibility = "hidden";
-  document.getElementById("heart").style.visibility = "hidden";
-  document.getElementById("shadow").style.visibility = "visible";
-}
+  $("#over").click(function(){
+    $("#contactContent").animate({height: "0vh"});
+    $("#werkContent").animate({height: "0vh"}).promise().done(function(){
+      $("#werkContent").css("display", "none");
+      $("#overContent").css("display", "block");
+      $("#contactContent").css("display", "none");
+
+      $("#overContent").animate({height: "70vh"});
+    });
+  });
+
+  $("#contact").click(function(){
+    $("#werkContent").animate({height: "0vh"});
+    $("#overContent").animate({height: "0vh"}).promise().done(function(){
+      $("#werkContent").css("display", "none");
+      $("#overContent").css("display", "none");
+      $("#contactContent").css("display", "block");
+
+      $("#contactContent").animate({height: "70vh"});
+    });
+  });
+});
+
